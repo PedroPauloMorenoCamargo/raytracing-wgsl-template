@@ -588,6 +588,34 @@ async function Person() {
     };
 }
 
+async function circular_plane() {
+    let boxes = [
+        // Define a circular plane at [0, 0, 0], oriented with the Y-axis
+        new Box(
+			[0, 0, -3],       // Plane center (slightly below origin)
+			[1.0, 0.0, 0.0],  // Red color
+			[0.0, 0.0, 0.5],  // Normal pointing upward
+			[-2.0, 0.0, 0.0], // Radius of the circular plane (-2 triggers plane logic)
+			[0.5, 0.5, 0.5, 0.5] // Material properties
+		),		
+    ];
+
+    return {
+        spheres: [],
+        quads: [],
+        boxes: boxes,
+        triangles: [],
+        meshes: [],
+        backgroundColor1: [0.0, 0.0, 0.0],
+        backgroundColor2: [0.0, 0.0, 0.0],
+        focusDistance: 5.0,
+        focusAngle: 0.0,
+        sunIntensity: 1.0,
+        samplesPerPixel: 1.0,
+        maxBounces: 10.0
+    };
+}
+
 
 
 export { getAvailableScene };

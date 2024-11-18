@@ -197,7 +197,7 @@ fn check_ray_collision(r: ray, max: f32) -> hit_record{
       // Pega a caixa atual
       let box = boxesb[i];
       // Checa se a caixa foi atingida
-      hit_box(r, box.center.xyz, box.radius.xyz, &record, max);
+      hit_box(r, box.center.xyz, box.radius.xyz, box.rotation, &record, max);
       // Se a caixa foi atingida e a distância é menor que a menor distância encontrada até agora
       if (record.hit_anything && record.t < closest.t){
           // Atualiza a menor distância
@@ -220,7 +220,7 @@ fn check_ray_collision(r: ray, max: f32) -> hit_record{
       let box_radius = (max_mesh - min_mesh) * 0.5;
 
       // Checa se o raio atinge a bounding box
-      hit_box(r, box_center, box_radius, &record, max);
+      hit_box(r, box_center, box_radius,mesh.rotation, &record, max);
       // Se a bounding box foi atingida
       if (record.hit_anything && record.t < closest.t){
             // Checa os triângulos da mesh

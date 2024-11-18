@@ -129,8 +129,51 @@ fn hit_triangle(r: ray, v0: vec3f, v1: vec3f, v2: vec3f, record: ptr<function, h
   record.hit_anything = true;
 }
 
-fn hit_box(r: ray, center: vec3f, rad: vec3f, record: ptr<function, hit_record>, t_max: f32)
+fn hit_box(r: ray, center: vec3f, rad: vec3f, rotation:vec4f,record: ptr<function, hit_record>, t_max: f32)
 {
+  // Checa se a caixa é um planocircular
+  if (rad.x < 0.0) {
+    // Normaliza a orientação do plano
+    let plane_normal = normalize(rotation.xyz);
+
+    // Denominador do cálculo da interseção
+    let denom = dot(plane_normal, r.direction);
+    if (abs(denom) < 0.0001) {
+      // Ray is parallel to the plane
+      (*record).hit_anything = false;
+      return;
+    }
+
+    // Pontos de interseção com o plano
+    let t = dot(center - r.origin, plane_normal) / denom;
+    if (t < RAY_TMIN || t > t_max) {
+      // Intersecção fora do intervalo	
+      (*record).hit_anything = false;
+      return;
+    }
+
+    // Calcula o ponto de interseção
+    let hit_point = ray_at(r, t);
+
+    // Checa se o ponto de interseção está dentro do círculo
+    let to_hit = hit_point - center;
+    // Calcula o raio do círculo
+    let radius = abs(rad.x); 
+    if (dot(to_hit, to_hit) > radius * radius) {
+      // Fora do círculo
+      (*record).hit_anything = false;
+      return;
+    }
+
+    // Update hit record for circular plane
+    (*record).t = t;
+    (*record).p = hit_point;
+    (*record).normal = plane_normal;
+    (*record).hit_anything = true;
+    return;
+  }
+
+   // Handle box case
   var m = 1.0 / r.direction;
   var n = m * (r.origin - center);
   var k = abs(m) * rad;
@@ -141,23 +184,22 @@ fn hit_box(r: ray, center: vec3f, rad: vec3f, record: ptr<function, hit_record>,
   var tN = max(max(t1.x, t1.y), t1.z);
   var tF = min(min(t2.x, t2.y), t2.z);
 
-  if (tN > tF || tF < 0.0)
-  {
-    record.hit_anything = false;
+  if (tN > tF || tF < 0.0) {
+    (*record).hit_anything = false;
     return;
   }
 
   var t = tN;
-  if (t < RAY_TMIN || t > t_max)
-  {
-    record.hit_anything = false;
+  if (t < RAY_TMIN || t > t_max) {
+    (*record).hit_anything = false;
     return;
   }
 
-  record.t = t;
-  record.p = ray_at(r, t);
-  record.normal = -sign(r.direction) * step(t1.yzx, t1.xyz) * step(t1.zxy, t1.xyz);
-  record.hit_anything = true;
+  // Update hit record for box
+  (*record).t = t;
+  (*record).p = ray_at(r, t);
+  (*record).normal = -sign(r.direction) * step(t1.yzx, t1.xyz) * step(t1.zxy, t1.xyz);
+  (*record).hit_anything = true;
 
   return;
 }

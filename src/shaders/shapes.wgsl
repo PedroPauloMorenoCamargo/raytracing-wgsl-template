@@ -1,7 +1,56 @@
-fn hit_sphere(center: vec3f, radius: f32, r: ray, record: ptr<function, hit_record>, max: f32)
-{
+struct FaceNormalResult {
+    normal: vec3f,
+    front_face: bool,
+};
 
+
+fn hit_sphere(center: vec3f, radius: f32, r: ray, record: ptr<function, hit_record>, max: f32){
+
+  // Calcula o vetor que vai do centro da esfera até a origem do raio
+  let oc = r.origin - center;
+  // Calcula a variável a da equação quadrática  (Direction * Direction)	
+  let a = 1.0;
+  // Calcula a variável h da equação quadrática  Direction * (Origin - Center)
+  let h = dot(oc, r.direction);
+  //Calcula a variável c da equação quadrática  (A-C) *(A-C) - R²
+  let c = dot(oc, oc) - radius * radius;
+  // Calcula o delta da equação quadrática h² - a*c
+  let delta = h*h - a*c;
+  // Se delta for menor que 0, não houve colisão
+  if (delta < 0.0){
+    (*record).hit_anything = false;
+    return;
+  }
+  // Calcula a raiz do delta
+  let sqrt_delta = sqrt(delta);
+  //Raiz atual da equação quadrática
+  var current_root = (-h - sqrt_delta) / a;
+
+  // Verifica se a raiz está dentro do intervalo
+  if (current_root < RAY_TMIN || current_root > max){
+    // Atualiza a raiz atual para a segunda raiz
+    current_root = (-h + sqrt_delta) / a;
+    // Verifica se a segunda raiz está dentro do intervalo
+    if (current_root < RAY_TMIN || current_root > max){
+      // Se nenhuma raiz estiver dentro do intervalo, não houve colisão
+      (*record).hit_anything = false;
+      return;
+    }
+  }
+
+  // Caso tenha acertado a esfera atualiza o record
+
+  // Atualiza o valor da distância
+  (*record).t = current_root;
+  // Atualiza o ponto de colisão
+  (*record).p = ray_at(r, current_root);
+  // Atualiza a normal
+  (*record).normal = normalize((*record).p - center);
+  // Atualiza a flag de colisão
+  (*record).hit_anything = true;
+  return;
 }
+
 
 fn hit_quad(r: ray, Q: vec4f, u: vec4f, v: vec4f, record: ptr<function, hit_record>, max: f32)
 {

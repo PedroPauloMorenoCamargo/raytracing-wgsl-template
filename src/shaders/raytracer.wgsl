@@ -421,6 +421,7 @@ fn trace(r: ray, rng_state: ptr<function, u32>) -> vec3f{
           //Se bateu por dentro subtrai a normal, uma vez que ela foi invertida
           r_= ray(current_object.p - current_object.normal*0.001, behaviour.direction);
         }
+        color *= current_object.object_color.rgb * (1.0 - absorption);
         continue;
       }
       //Checa se o raio foi absorvido 

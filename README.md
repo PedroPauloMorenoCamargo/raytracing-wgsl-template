@@ -59,61 +59,89 @@ Key highlights:
 
 Below are example renders included in the `imgs/` folder, showcasing different lighting, materials, and geometry types:
 
-### Basic Scene
-- A minimal scene to test the rendering pipeline.  
-<img src="imgs/basic.png" width="300"/>
+### Basic Scene  
+A minimal scene to test the rendering pipeline.  
+<div align="center">
+  <img src="imgs/basic.png" width="300"/>
+</div>
 
-### Spheres
-- Multi-sphere layout for testing materials and shadows.  
-<img src="imgs/spheres.png" width="300"/>
+### Spheres  
+Multi-sphere layout for testing materials and shadows.  
+<div align="center">
+  <img src="imgs/spheres.png" width="300"/>
+</div>
 
 ### Night Scene  
-- Low-light environment with contrast and emissive highlights.  
-<img src="imgs/night.png" width="300"/>
+Low-light environment with contrast and emissive highlights.  
+<div align="center">
+  <img src="imgs/night.png" width="300"/>
+</div>
 
 ### Emissive Objects  
-- Objects that emit light, showcasing glow and color bleeding.  
-<img src="imgs/emissive.png" width="300"/>
+Objects that emit light, showcasing glow and color bleeding.  
+<div align="center">
+  <img src="imgs/emissive.png" width="300"/>
+</div>
 
 ### Fuzz (Metal Roughness)  
-- Tests various levels of metal fuzziness for rough surface reflections.  
-<img src="imgs/fuzz.png" width="300"/>
+Tests various levels of metal fuzziness for rough surface reflections.  
+<div align="center">
+  <img src="imgs/fuzz.png" width="300"/>
+</div>
 
 ### Cubes  
-- A scene filled with multiple reflective and refractive cubes.  
-<img src="imgs/cubes.png" width="300"/>
+A scene filled with multiple reflective and refractive cubes.  
+<div align="center">
+  <img src="imgs/cubes.png" width="300"/>
+</div>
 
 ### Dielectric Material  
-- Demonstrates realistic glass-like refraction and internal reflections.  
-<img src="imgs/dieletric.png" width="300"/>
+Demonstrates realistic glass-like refraction and internal reflections.  
+<div align="center">
+  <img src="imgs/dieletric.png" width="300"/>
+</div>
 
 ### Metal  
-- Spheres with metal properties.  
-<img src="imgs/metal.png" width="300"/>
+Spheres with metal properties.  
+<div align="center">
+  <img src="imgs/metal.png" width="300"/>
+</div>
 
 ### Mirror  
-- Mirror surfaces to test reflections.  
-<img src="imgs/mirror.png" width="300"/>
+Mirror surfaces to test reflections.  
+<div align="center">
+  <img src="imgs/mirror.png" width="300"/>
+</div>
 
 ### Infinite  
-- An infinite ground or background rendering.  
-<img src="imgs/infinite.png" width="300"/>
+An infinite ground or background rendering.  
+<div align="center">
+  <img src="imgs/infinite.png" width="300"/>
+</div>
 
 ### Bunny Mesh  
-- Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
-<img src="imgs/bunny.png" width="300"/>
+Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
+<div align="center">
+  <img src="imgs/bunny.png" width="300"/>
+</div>
 
 ### Cornell Box  
-- A classic Cornell Box setup used for lighting and material accuracy tests.  
-<img src="imgs/cornell.png" width="300"/>
+A classic Cornell Box setup used for lighting and material accuracy tests.  
+<div align="center">
+  <img src="imgs/cornell.png" width="300"/>
+</div>
 
 ### Suzanne (Blender Monkey)  
-- Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
-<img src="imgs/suzzane.png" width="300"/>
+Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
+<div align="center">
+  <img src="imgs/suzzane.png" width="300"/>
+</div>
 
 ### Cornell Balls  
-- A fun mixture of a Cornell Box with multiple spheres.  
-<img src="imgs/personalized.png" width="300"/>
+A fun mixture of a Cornell Box with multiple spheres.  
+<div align="center">
+  <img src="imgs/personalized.png" width="300"/>
+</div>
 
 
 

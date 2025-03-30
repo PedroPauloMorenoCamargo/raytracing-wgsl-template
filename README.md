@@ -60,59 +60,59 @@ Key highlights:
 Below are example renders included in the `imgs/` folder, showcasing different lighting, materials, and geometry types:
 
 ### Basic Scene
-A minimal scene to test the rendering pipeline.  
+- A minimal scene to test the rendering pipeline.  
 <img src="imgs/basic.png" width="300"/>
 
 ### Spheres
-Multi-sphere layout for testing materials and shadows.  
+- Multi-sphere layout for testing materials and shadows.  
 <img src="imgs/spheres.png" width="300"/>
 
 ### Night Scene  
-Low-light environment with contrast and emissive highlights.  
+- Low-light environment with contrast and emissive highlights.  
 <img src="imgs/night.png" width="300"/>
 
 ### Emissive Objects  
-Objects that emit light, showcasing glow and color bleeding.  
+- Objects that emit light, showcasing glow and color bleeding.  
 <img src="imgs/emissive.png" width="300"/>
 
 ### Fuzz (Metal Roughness)  
-Tests various levels of metal fuzziness for rough surface reflections.  
+- Tests various levels of metal fuzziness for rough surface reflections.  
 <img src="imgs/fuzz.png" width="300"/>
 
 ### Cubes  
-A scene filled with multiple reflective and refractive cubes.  
+- A scene filled with multiple reflective and refractive cubes.  
 <img src="imgs/cubes.png" width="300"/>
 
 ### Dielectric Material  
-Demonstrates realistic glass-like refraction and internal reflections.  
-<img src="imgs/dielectric.png" width="300"/>
+- Demonstrates realistic glass-like refraction and internal reflections.  
+<img src="imgs/dieletric.png" width="300"/>
 
 ### Metal  
-Spheres with metal properties.  
+- Spheres with metal properties.  
 <img src="imgs/metal.png" width="300"/>
 
 ### Mirror  
-Mirror surfaces to test reflections.  
+- Mirror surfaces to test reflections.  
 <img src="imgs/mirror.png" width="300"/>
 
 ### Infinite  
-An infinite ground or background rendering.  
+- An infinite ground or background rendering.  
 <img src="imgs/infinite.png" width="300"/>
 
 ### Bunny Mesh  
-Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
+- Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
 <img src="imgs/bunny.png" width="300"/>
 
 ### Cornell Box  
-A classic Cornell Box setup used for lighting and material accuracy tests.  
+- A classic Cornell Box setup used for lighting and material accuracy tests.  
 <img src="imgs/cornell.png" width="300"/>
 
 ### Suzanne (Blender Monkey)  
-Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
+- Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
 <img src="imgs/suzzane.png" width="300"/>
 
 ### Cornell Balls  
-A fun mixture of a Cornell Box with multiple spheres.  
+- A fun mixture of a Cornell Box with multiple spheres.  
 <img src="imgs/personalized.png" width="300"/>
 
 

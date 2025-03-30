@@ -57,29 +57,19 @@ Key highlights:
 
 ## Scene Examples
 
-## Scene Examples
-
 Below are example renders included in the `imgs/` folder, showcasing different lighting, materials, and geometry types:
 
 ### Basic Scene
 A minimal scene to test the rendering pipeline.  
 ![basic](imgs/basic.png)
 
-### Bunny Mesh
-Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
-![bunny](imgs/bunny.png)
+### Spheres
+Multi-sphere layout for testing materials and shadows.  
+![spheres](imgs/spheres.png)
 
-### Cornell Box
-A classic Cornell Box setup used for lighting and material accuracy tests.  
-![cornell](imgs/cornell.png)
-
-### Cubes
-A scene filled with multiple reflective and refractive cubes.  
-![cubes](imgs/cubes.png)
-
-### Dielectric Material
-Demonstrates realistic glass-like refraction and internal reflections.  
-![dielectric](imgs/dielectric.png)
+### Night Scene
+Low-light environment with contrast and emissive highlights.  
+![night](imgs/night.png)
 
 ### Emissive Objects
 Objects that emit light, showcasing glow and color bleeding.  
@@ -89,33 +79,40 @@ Objects that emit light, showcasing glow and color bleeding.
 Tests various levels of metal fuzziness for rough surface reflections.  
 ![fuzz](imgs/fuzz.png)
 
-### Infinite Ground
-Uses large planes to simulate an infinite ground surface.  
-![infinite](imgs/infinite.png)
+### Cubes
+A scene filled with multiple reflective and refractive cubes.  
+![cubes](imgs/cubes.png)
+
+### Dielectric Material
+Demonstrates realistic glass-like refraction and internal reflections.  
+![dielectric](imgs/dieletric.png)
 
 ### Metal
-Reflective surfaces with varying metal properties.  
+Spheres with metal properties.  
 ![metal](imgs/metal.png)
 
 ### Mirror
-Perfect reflective surfaces to test accuracy of reflections.  
+Mirror surfaces to test reflections.  
 ![mirror](imgs/mirror.png)
 
-### Night Scene
-Low-light environment with contrast and emissive highlights.  
-![night](imgs/night.png)
+### Infinite
+![infinite](imgs/infinite.png)
 
-### Personalized Scene
-Custom user-defined scene, great for flexibility and creativity.  
-![personalized](imgs/personalized.png)
+### Bunny Mesh
+Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
+![bunny](imgs/bunny.png)
 
-### Spheres
-Classic multi-sphere layout for testing materials and shadows.  
-![spheres](imgs/spheres.png)
+### Cornell Box
+A classic Cornell Box setup used for lighting and material accuracy tests.  
+![cornell](imgs/cornell.png)
 
 ### Suzanne (Blender Monkey)
 Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
 ![suzzane](imgs/suzzane.png)
+
+### Cornell Balls
+A fun mixture of a Cornell Box with multiple spheres.
+![personalized](imgs/personalized.png)
 
 
 

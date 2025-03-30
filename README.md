@@ -61,58 +61,60 @@ Below are example renders included in the `imgs/` folder, showcasing different l
 
 ### Basic Scene
 A minimal scene to test the rendering pipeline.  
-![basic](imgs/basic.png)
+<img src="imgs/basic.png" width="300"/>
 
 ### Spheres
 Multi-sphere layout for testing materials and shadows.  
-![spheres](imgs/spheres.png)
+<img src="imgs/spheres.png" width="300"/>
 
-### Night Scene
+### Night Scene  
 Low-light environment with contrast and emissive highlights.  
-![night](imgs/night.png)
+<img src="imgs/night.png" width="300"/>
 
-### Emissive Objects
+### Emissive Objects  
 Objects that emit light, showcasing glow and color bleeding.  
-![emissive](imgs/emissive.png)
+<img src="imgs/emissive.png" width="300"/>
 
-### Fuzz (Metal Roughness)
+### Fuzz (Metal Roughness)  
 Tests various levels of metal fuzziness for rough surface reflections.  
-![fuzz](imgs/fuzz.png)
+<img src="imgs/fuzz.png" width="300"/>
 
-### Cubes
+### Cubes  
 A scene filled with multiple reflective and refractive cubes.  
-![cubes](imgs/cubes.png)
+<img src="imgs/cubes.png" width="300"/>
 
-### Dielectric Material
+### Dielectric Material  
 Demonstrates realistic glass-like refraction and internal reflections.  
-![dielectric](imgs/dieletric.png)
+<img src="imgs/dielectric.png" width="300"/>
 
-### Metal
+### Metal  
 Spheres with metal properties.  
-![metal](imgs/metal.png)
+<img src="imgs/metal.png" width="300"/>
 
-### Mirror
+### Mirror  
 Mirror surfaces to test reflections.  
-![mirror](imgs/mirror.png)
+<img src="imgs/mirror.png" width="300"/>
 
-### Infinite
-![infinite](imgs/infinite.png)
+### Infinite  
+An infinite ground or background rendering.  
+<img src="imgs/infinite.png" width="300"/>
 
-### Bunny Mesh
+### Bunny Mesh  
 Features a Stanford Bunny mesh, demonstrating complex geometry rendering.  
-![bunny](imgs/bunny.png)
+<img src="imgs/bunny.png" width="300"/>
 
-### Cornell Box
+### Cornell Box  
 A classic Cornell Box setup used for lighting and material accuracy tests.  
-![cornell](imgs/cornell.png)
+<img src="imgs/cornell.png" width="300"/>
 
-### Suzanne (Blender Monkey)
+### Suzanne (Blender Monkey)  
 Includes the iconic Blender monkey head, Suzanne, as a mesh test.  
-![suzzane](imgs/suzzane.png)
+<img src="imgs/suzzane.png" width="300"/>
 
-### Cornell Balls
-A fun mixture of a Cornell Box with multiple spheres.
-![personalized](imgs/personalized.png)
+### Cornell Balls  
+A fun mixture of a Cornell Box with multiple spheres.  
+<img src="imgs/personalized.png" width="300"/>
+
 
 
 
